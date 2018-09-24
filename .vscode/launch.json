@@ -1,0 +1,73 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File (Integrated Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+//            "args": ["train","--dataset=coco/","--model=coco", "---cfg=tutorial_1gpu_e2e_faster_rcnn_R-50-FPN.yaml"              
+//            "args": ["train","--dataset=coco/","--model=coco"              
+//            "args": ["train","--dataset=/shared/Mask_RCNN/samples/balloon/balloon","--weights=coco"  ],
+//            "args": ["train","--dataset=/shared/Mask_RCNN/samples/paper6","--weights=coco"],
+//            "args": ["train","--dataset=/shared/Mask_RCNN/samples/paper6","--weights=last"],
+//            "args": ["splash","--weights=mask_rcnn_particle_0030.h5", "--image=samples/paper6/Test1_org/" ],              
+//            "args": ["train","--dataset=/shared/Mask_RCNN/samples/soldier","--weights=coco"],
+//            "args": ["train","--dataset=/shared/Mask_RCNN/samples/soldier_360","--weights=last"],
+//            "args": ["splash","--weights=mask_rcnn_balloon_0030.h5","--image=samples/balloon/balloon/val/8053085540_a72bd21a64_k.jpg" ],              
+//            "args": ["splash","--weights=mask_rcnn_soldier_0011.h5","--image=samples/soldier/val/2018-05-21 20_45_51-Greenshot.png" ],              
+////            "args": ["splash","--weights=mask_rcnn_soldier_0020.h5","--video=samples/soldier/h30_d10.mp4" ],             
+            "args": ["splash","--weights=mask_rcnn_soldier_0030.h5"],              
+//            "args": ["splash","--weights=mask_rcnn_balloon_0010.h5","--video=samples/balloon/kids_balloon.mp4" ],              
+//            "args": ["evaluate","--weights=mask_rcnn_balloon_0010.h5","--dataset=samples/balloon/balloon/val" ],  // no function             
+//            "args": ["evaluate","--dataset=/shared/Mask_RCNN/coco_data","--limit=20", "--model=coco" ],            
+        },
+        {
+            "name": "Python: Attach",
+            "type": "python",
+            "request": "attach",
+            "port": 3000,
+            "host": "localhost"
+        },
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "console": "integratedTerminal",
+            "args": [
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ],
+            "django": true
+        },
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "${workspaceFolder}/app.py"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Current File (External Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "externalTerminal"
+        }
+    ]
+}
